@@ -7,6 +7,7 @@
 <body>
 </h1>
         <script type="text/javascript">
+            function updateClock() {
             var currentTime = new Date();
             var hours = currentTime.getHours();
             var minutes = currentTime.getMinutes();
@@ -26,6 +27,10 @@
 
             document.write("<b><div id='d1'>" + hours + ":" + 
                 minutes + ":" + seconds + suffix + " " +  "</div></b>");
+            
+            setInterval(updateClock, 1000); }
+            
+            updateClock();
 
         </script>
     </body>
